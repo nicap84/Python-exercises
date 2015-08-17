@@ -132,11 +132,15 @@ def ej10():
     # Read a string of user and prints a message on screen if and only if it contains all the vowels
     palabra = raw_input("Introduzca una palabra: ")
     vocales = ["a", "e", "i", "o", "u"]
+    notall = False
     for i in vocales:
         if i not in palabra:
+            notall = True
             break
-        else:
-            print ("The word have all vowels")
+    if notall:
+        print ("The word don't have all vowels")
+    else:
+        print ("The word have all vowels")
 
 
 if __name__ == "__main__":
